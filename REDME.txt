@@ -1,0 +1,154 @@
+ENCS3320 - Computer Networks
+Project 1 - Network Diagnostic System
+
+Team Number: T026
+
+==================================================
+PROJECT DESCRIPTION
+==================================================
+
+This project implements a Network Diagnostic System using Python socket programming.
+
+The system includes:
+- Multi-threaded TCP Server
+- Multiple TCP Clients
+- Network diagnostic command execution
+- Request logging
+- HTTP Web Server
+- Dashboard
+- Command History
+- Statistics
+- Search
+- Log file download
+- HTTP status code handling
+- Configuration file
+
+==================================================
+NETWORK COMMANDS
+==================================================
+
+The client supports the following commands:
+
+1. Ping Host
+2. Trace Route
+3. DNS Lookup
+4. IP Configuration
+5. Routing Table
+6. ARP Table
+7. Active TCP Connections
+8. Exit
+
+==================================================
+CONFIGURATION
+==================================================
+
+All configurable parameters are stored in:
+
+config.json
+
+The configuration file contains:
+- TCP Server Port
+- HTTP Server Port
+- Log File Location
+- Maximum Clients
+- Default Homepage
+
+Current configuration:
+
+TCP Port: 5254
+HTTP Port: 6254
+Log File: logs/log.txt
+Maximum Clients: 5
+Default Homepage: /
+
+==================================================
+HOW TO RUN THE PROJECT
+==================================================
+
+1. Open a terminal in the project directory.
+
+2. Start the server using:
+
+python run_server.py
+
+This starts both:
+- TCP Server on port 5254
+- HTTP Web Server on port 6254
+
+3. Open another terminal for each client and run:
+
+python run_client.py
+
+Multiple clients can be executed simultaneously in separate terminals.
+
+4. Open the web interface in a browser using:
+
+http://127.0.0.1:6254
+
+==================================================
+WEB INTERFACE
+==================================================
+
+The web interface contains:
+
+- Home
+- Dashboard
+- Command History
+- Statistics
+- Search
+- Download
+
+The web server also handles:
+
+- 200 OK
+- 400 Bad Request
+- 403 Forbidden
+- 404 Not Found
+
+A custom 404 page is displayed for undefined pages.
+
+==================================================
+LOG FILE
+==================================================
+
+Executed commands are stored in:
+
+logs/log.txt
+
+Each log entry contains:
+
+- Timestamp
+- Client IP
+- Client Port
+- Command
+- Parameter
+- Execution Time
+- Status
+
+==================================================
+PROJECT STRUCTURE
+==================================================
+
+client/
+config/
+core/
+data/
+logs/
+screenshots/
+server/
+web/
+
+config.json
+README.txt
+run_server.py
+run_client.py
+
+==================================================
+NOTES
+==================================================
+
+The project uses Python standard libraries only.
+
+The TCP server uses multi-threading to handle multiple clients simultaneously.
+
+The HTTP server and TCP server are started together using run_server.py.

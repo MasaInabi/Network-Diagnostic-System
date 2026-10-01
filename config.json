@@ -1,0 +1,8 @@
+{
+    "host": "127.0.0.1",
+    "tcp_port": 5254,
+    "http_port": 6254,
+    "log_file": "logs/log.txt",
+    "max_clients": 5,
+    "default_homepage": "/"
+}
